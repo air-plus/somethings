@@ -1,12 +1,13 @@
 package somethings;
 
 import mindustry.mod.Mod;
+import mindustry.type.Item;
 
-public class ModItems {
-    public static Item example-item;
+class ModItems {
+    public static Item exampleItem;
 
     public static void load() {
-        example-item = new Item("example-item");
+        exampleItem = new Item("example-item");
     }
 }
 
