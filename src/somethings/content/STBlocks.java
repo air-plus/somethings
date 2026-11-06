@@ -11,7 +11,7 @@ public class STBlocks {
     public static void load() {
         zAlloyMixer = new GenericCrafter("z-alloy-mixer") {
             {
-                health = 8000f;
+                health = 8000;
                 size = 2;
                 craftTime = 120f;
                 requirements(Category.crafting, ItemStack.with(
@@ -20,7 +20,7 @@ public class STBlocks {
                         Items.silicon, 2000,
                         Items.surgeAlloy, 800
                 ));
-                consumeItem(ItemStack.with(
+                consumeItems(ItemStack.with(
                         Items.surgeAlloy, 2,
                         Items.silicon, 1
                 ));
