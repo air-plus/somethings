@@ -12,7 +12,7 @@ public class STBlocks {
         zAlloyMixer = new GenericCrafter("z-alloy-mixer") {
             {
                 health = 8000;
-                size = 2;
+                size = 3;
                 craftTime = 120f;
                 requirements(Category.crafting, ItemStack.with(
                         Items.copper, 4000,
@@ -29,8 +29,7 @@ public class STBlocks {
                 outputItem = new ItemStack(STItems.zAlloy, 2);
                 drawer = new DrawMulti(
                 new DrawDefault(),
-                new DrawArcSmelt(),
-                new DrawLiquidTile(Liquids.slag)
+                new DrawArcSmelt()
                 );
             }
         };
