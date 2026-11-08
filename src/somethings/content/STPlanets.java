@@ -11,12 +11,15 @@ public class STPlanets {
         psiStar = new Planet("psi", null, 2.5f, 0) {
             {
                 accessible = false;
+                visible = true;
                 lightColor = Color.red;
             }
         };
 
         alpha = new Planet("alpha", psiStar, 1f, 1) {
             {
+                accessible = true;
+                visible = true;
                 meshLoader = () -> new NoiseMesh(
                 this,
                 114514,
