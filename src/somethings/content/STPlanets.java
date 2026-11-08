@@ -9,20 +9,25 @@ public class STPlanets {
     public static Planet psiStar, alpha;
 
     public static void load() {
-        psiStar = new Planet("psi", null, 2.5f, 0) {
-            {
-                accessible = false;
-                alwaysUnlocked = true;
-                lightColor = Color.red;
-            }
-        };
+        psiStar = new Planet("psi", null, 2.5f, 0) {{
+            accessible = false;
+            alwaysUnlocked = true;
+            lightColor = Color.red;
+            meshLoader = () -> new SunMesh(
+                this,
+                2.5f,
+                4,
+                Color.valueOf("6b1a1a"),
+                Color.valueOf("cc3333"),
+                Color.valueOf("ffaa55")
+            );
+        }};
 
-        alpha = new Planet("alpha", psiStar, 1f, 1) {
-            {
-                generator = new SerpuloPlanetGenerator();
-                alwaysUnlocked = true;
-                iconColor = Color.green;
-                meshLoader = () -> new NoiseMesh(
+        alpha = new Planet("alpha", psiStar, 1f, 2) {{
+            generator = new SerpuloPlanetGenerator();
+            alwaysUnlocked = true;
+            iconColor = Color.valueOf("33ff33");
+            meshLoader = () -> new NoiseMesh(
                 this,
                 114514,
                 4,
@@ -37,8 +42,19 @@ public class STPlanets {
                 0.5f,
                 1f,
                 0.5f
-                );
-            }
-        };
+            );
+            cloudMeshLoader = () -> new HexSkyMesh(
+                this,
+                114514,
+                1.5f,
+                1.25f,
+                3,
+                Color.valueOf("ffffff"),
+                2,
+                0.7f,
+                1.5f,
+                0.5f
+            );
+        }};
     }
 }
