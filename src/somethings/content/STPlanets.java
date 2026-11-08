@@ -1,6 +1,7 @@
 package somethings.content;
 
 import mindustry.type.Planet;
+import mindustry.maps.planet.SerpuloPlanetGenerator;
 import mindustry.graphics.g3d.*;
 import arc.graphics.Color;
 
@@ -18,8 +19,10 @@ public class STPlanets {
 
         alpha = new Planet("alpha", psiStar, 1f, 1) {
             {
+                generator = new SerpuloPlanetGenerator();
                 accessible = true;
                 visible = true;
+                iconColor = Color.green;
                 meshLoader = () -> new NoiseMesh(
                 this,
                 114514,
@@ -31,7 +34,7 @@ public class STPlanets {
                 1f,
                 Color.valueOf("2a5a8c"),
                 Color.valueOf("4a7c3f"),
-                4,
+                1,
                 0.5f,
                 1f,
                 0.5f
