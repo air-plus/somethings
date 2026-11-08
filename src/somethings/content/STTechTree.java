@@ -4,7 +4,7 @@ import mindustry.content.*;
 
 public class STTechTree {
     public static void load() {
-        alpha.techTree = nodeRoot("alpha", coreShard, () -> {
+        STPlanets.alpha.techTree = nodeRoot("alpha", Blocks.coreShard, () -> {
             node(STBlocks.zAlloyMixer, () -> {});
 
             nodeProduce(STItems.zAlloy, () -> {});
