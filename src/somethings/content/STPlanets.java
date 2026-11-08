@@ -12,7 +12,7 @@ public class STPlanets {
         psiStar = new Planet("psi", null, 2.5f, 0) {
             {
                 accessible = false;
-                visible = true;
+                alwaysUnlocked = true;
                 lightColor = Color.red;
             }
         };
@@ -20,8 +20,7 @@ public class STPlanets {
         alpha = new Planet("alpha", psiStar, 1f, 1) {
             {
                 generator = new SerpuloPlanetGenerator();
-                accessible = true;
-                visible = true;
+                alwaysUnlocked = true;
                 iconColor = Color.green;
                 meshLoader = () -> new NoiseMesh(
                 this,
