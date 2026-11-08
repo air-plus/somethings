@@ -8,5 +8,7 @@ public class SomethingsMod extends Mod {
     public void loadContent() {
         STItems.load();
         STBlocks.load();
+        STPlanets.load();
+        STTechTree.load();
     }
 }
