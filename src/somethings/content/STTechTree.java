@@ -1,5 +1,6 @@
 package somethings.content;
 
+import mindustry.content.TechTree.*;
 import mindustry.content.*;
 
 public class STTechTree {
