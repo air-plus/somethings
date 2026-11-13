@@ -9,6 +9,7 @@ public class SomethingsMod extends Mod {
         STItems.load();
         STBlocks.load();
         STPlanets.load();
+        STSectorPresets.load();
         STTechTree.load();
     }
 }
