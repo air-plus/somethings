@@ -1,7 +1,7 @@
 package somethings.content;
 
 import mindustry.type.Planet;
-import mindustry.maps.planet.BlankPlanetGenerator;
+import mindustry.maps.generators.BlankPlanetGenerator;
 import mindustry.graphics.g3d.*;
 import arc.graphics.Color;
 
