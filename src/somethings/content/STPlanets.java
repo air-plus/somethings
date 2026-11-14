@@ -29,15 +29,10 @@ public class STPlanets {
             iconColor = Color.valueOf("33ff33");
 
             generator = new BlankPlanetGenerator();
-            meshLoader = () -> new NoiseMesh(
-                this, 1, 4, 1f, 3, 0.8f, 1f, 1f,
-                Color.valueOf("2a5a8c"),
-                Color.valueOf("4a7c3f"),
-                1, 0.5f, 1f, 0.5f
-            );
+            meshLoader = () -> new HexMesh(this, 1);
             cloudMeshLoader = () -> new HexSkyMesh(
                 this, 2, 1f, 0.15f, 3,
-                Color.valueOf("ffffff"),
+                Color.valueOf("ffffff").a(0.7f),
                 2, 0.7f, 1.5f, 0.5f
             );
         }};
