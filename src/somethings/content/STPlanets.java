@@ -11,7 +11,6 @@ public class STPlanets {
 
     public static void load() {
         psiStar = new Planet("psi", null, 2.5f) {{
-            bloom = true;
             accessible = false;
 
             meshLoader = () -> new SunMesh(
@@ -40,7 +39,8 @@ public class STPlanets {
                 4, 0.5f, 1.2f, 0.4f
             );
             ruleSetter = r -> {
-                r.waveTeam = Team.derelict;
+                r.defaultTeam = Team.crux;
+                r.waveTeam = Team.green;
             };
         }};
     }
