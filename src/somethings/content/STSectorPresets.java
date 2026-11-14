@@ -6,7 +6,7 @@ public class STSectorPresets {
     public static SectorPreset loadingSite;
 
     public static void load() {
-        loadingSite = new SectorPreset("loading-site", STPlanets.alpha, 0) {{
+        loadingSite = new SectorPreset("loading-site", STPlanets.alpha, 1) {{
             alwaysUnlocked = true;
             captureWave = 10;
             difficulty = 1;
