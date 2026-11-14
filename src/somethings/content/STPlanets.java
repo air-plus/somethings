@@ -36,7 +36,7 @@ public class STPlanets {
                 1, 0.5f, 1f, 0.5f
             );
             cloudMeshLoader = () -> new HexSkyMesh(
-                this, 2, 1f, 1.15f, 3,
+                this, 2, 1f, 0.15f, 3,
                 Color.valueOf("ffffff"),
                 2, 0.7f, 1.5f, 0.5f
             );
